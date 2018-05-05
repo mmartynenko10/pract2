@@ -19,6 +19,12 @@ public class ShapeFactory {
     public int width = 25;
     public int height = 25;
 
+    /**
+     * Метод-конструкто создает объект класса фабрики фигур.
+     * @param shape_type - целое число.
+     * Целочислинное деление параметра _shape на 10 определяет тип фигуры, 
+     * а остаток от деления на 10 опредеяет толщину/цвет границ фигуры или градиент.
+     */
     public ShapeFactory(int shape_type) {
         switch (shape_type / 10) {
             case 1: {
@@ -77,6 +83,14 @@ public class ShapeFactory {
         }
     }
 
+    /**
+     * Метод создания объекта фигуры звезды.
+     * @param arms - количество углов звезды.
+     * @param center - coordinat of center point.
+     * @param rOuter - внешний радиус звезды. 
+     * @param rInner - внутренний радиус звезды.
+     * @return возвращает объект звезды.
+     */
     private static Shape createStar(int arms, Point center, double rOuter, double rInner) {
         double angle = 3.141592653589793 / (double)arms;
         GeneralPath path = new GeneralPath();

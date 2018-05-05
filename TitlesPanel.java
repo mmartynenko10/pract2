@@ -25,6 +25,13 @@ implements ActionListener {
     private int start_angle = 0;
     private int shape;
 
+    /**
+     * Метод-конструктор класса TitlesPanel.
+     * Создает объект класса TitlePanel.
+     * @param _shape - целое число.
+     * Целочислинное деление параметра _shape на 10 определяет тип фигуры, 
+     * а остаток от деления на 10 опредеяет толщину/цвет границ фигуры или градиент.
+     */
     public TitlesPanel(int _shape) {
         this.shape = _shape;
         this.animation = new Timer(50, this);
@@ -39,6 +46,10 @@ implements ActionListener {
         }
     }
 
+    /**
+     * Метод перерисовывает фигуры.
+     * @param g see {@link Graphics}
+     */
     private void doDrawing(Graphics g) {
         this.is_done = false;
         this.g2d = (Graphics2D)g;

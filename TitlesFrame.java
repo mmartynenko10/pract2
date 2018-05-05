@@ -7,6 +7,10 @@ import javax.swing.SwingUtilities;
 
 public class TitlesFrame
 extends JFrame {
+    /**
+     * Конструктор класса TitlesFrame.
+     * Создает объект класса.
+     */
     public TitlesFrame() {
         this.initUI();
     }
@@ -19,6 +23,10 @@ extends JFrame {
         this.setLocationRelativeTo(null);
     }
 
+    /**
+     * Точка входа в программу на языке Java.
+     * @param args - параметры командной строки.
+     */
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable(){
 
